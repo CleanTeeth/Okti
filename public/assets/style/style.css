@@ -1,0 +1,225 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #17171717;
+  padding: 20px;
+}
+
+#c {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
+.hamburger {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.hamburger:focus > .hamburger__container {
+  box-shadow: 0 0 2px 2px #51a7e8;
+}
+.hamburger__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 35px;
+  height: 30px;
+}
+.hamburger__bars {
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #dedede;
+  border: 0px solid #dedede;
+  border-radius: 50px;
+  transition: transform 220ms ease-in-out;
+}
+.hamburger__bars:before, .hamburger__bars:after {
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #dedede;
+  border: 0px solid #dedede;
+  border-radius: 50px;
+  content: '';
+}
+.hamburger__bars:before {
+  top: -12px;
+  transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
+}
+.hamburger__bars:after {
+  bottom: -12px;
+  transition: bottom 100ms 250ms ease-in, transform 220ms ease-in-out;
+}
+.hamburger--active .hamburger__bars {
+  transform: rotate(225deg);
+  transition: transform 220ms 120ms ease-in-out;
+}
+.hamburger--active .hamburger__bars:before {
+  top: 0;
+  transition: top 100ms ease-out;
+}
+.hamburger--active .hamburger__bars:after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
+}
+
+.hamburger--active {
+  transform: translateX(250px);
+}
+
+.hamburger:focus, .hamburger__container:focus {
+  outline: none;
+}
+
+.hamburger, .navigation {
+  transition: transform .3s ease-in-out;
+}
+
+.navigation {
+  height: 100vh;
+  width: 250px;
+  background-color: #171717;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-250px);
+  color: #dedede;
+}
+
+.navigation--active {
+  transform: translateX(0px);
+}
+
+.navigation__list {
+  /* margin-top: 50px; */
+  text-align: center;
+  display: inline;
+  list-style: 0;
+}
+
+.navigation__item {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login__form {
+  text-align: center;
+  transform: translateY(-250px);
+  transition: transform .5s ease-in-out;
+}
+
+.login__form input[type="text"] {
+  color: #dedede;
+  text-align: center;
+  height: 30px;
+  background-color: #171717;
+  border: 0;
+  border-radius: 50px;
+}
+
+.login__form input[type="password"] {
+  color: #dedede;
+  text-align: center;
+  height: 30px;
+  background-color: #171717;
+  border: 0;
+  border-radius: 50px;
+}
+
+.login__form input[type="button"] {
+  border: 0;
+  border-radius: 50px;
+  background-color: #ab001c;
+  color: #dedede;
+}
+
+.login__form input[type="submit"] {
+  border: 0;
+  border-radius: 50px;
+  background-color: #fc23a2;
+  color: #dedede;
+}
+
+.login__form--active {
+  transform: translateY(0px);
+}
+
+.register__form {
+  text-align: center;
+  transform: translateY(-390px);
+  transition: transform .5s ease-in-out;
+}
+
+.register__form input[type="text"] {
+  color: #dedede;
+  text-align: center;
+  height: 30px;
+  background-color: #171717;
+  border: 0;
+  border-radius: 50px;
+}
+
+.register__form input[type="password"] {
+  color: #dedede;
+  text-align: center;
+  height: 30px;
+  background-color: #171717;
+  border: 0;
+  border-radius: 50px;
+}
+
+.register__form input[type="button"] {
+  border: 0;
+  border-radius: 50px;
+  background-color: #ab001c;
+  color: #dedede;
+}
+
+.register__form input[type="submit"] {
+  border: 0;
+  border-radius: 50px;
+  background-color: #fc23a2;
+  color: #dedede;
+}
+
+.register__form--active {
+  transform: translateY(0px);
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+  color: #dedede;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+  color: #dedede;  
+}
+
+/* mouse over link */
+a:hover {  
+  text-decoration: none; 
+  color: #dedede;  
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;  
+  color: #dedede;
+}
+
+
