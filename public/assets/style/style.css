@@ -4,7 +4,9 @@ html {
 
 body {
   background-color: #17171717;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 #c {
@@ -23,10 +25,14 @@ body {
   border: 0;
   background-color: transparent;
   cursor: pointer;
+  margin-left: 15px;
+  margin-top: 15px;
 }
+
 .hamburger:focus > .hamburger__container {
   box-shadow: 0 0 2px 2px #51a7e8;
 }
+
 .hamburger__container {
   display: flex;
   align-items: center;
@@ -34,6 +40,7 @@ body {
   width: 35px;
   height: 30px;
 }
+
 .hamburger__bars {
   position: absolute;
   width: 35px;
@@ -43,6 +50,7 @@ body {
   border-radius: 50px;
   transition: transform 220ms ease-in-out;
 }
+
 .hamburger__bars:before, .hamburger__bars:after {
   display: block;
   position: absolute;
@@ -53,18 +61,22 @@ body {
   border-radius: 50px;
   content: '';
 }
+
 .hamburger__bars:before {
   top: -12px;
   transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
 }
+
 .hamburger__bars:after {
   bottom: -12px;
   transition: bottom 100ms 250ms ease-in, transform 220ms ease-in-out;
 }
+
 .hamburger--active .hamburger__bars {
   transform: rotate(225deg);
   transition: transform 220ms 120ms ease-in-out;
 }
+
 .hamburger--active .hamburger__bars:before {
   top: 0;
   transition: top 100ms ease-out;
@@ -96,6 +108,7 @@ body {
   left: 0;
   transform: translateX(-250px);
   color: #dedede;
+  margin: 0;
 }
 
 .navigation--active {
@@ -103,7 +116,6 @@ body {
 }
 
 .navigation__list {
-  /* margin-top: 50px; */
   text-align: center;
   display: inline;
   list-style: 0;
@@ -116,86 +128,100 @@ body {
 
 .login__form {
   text-align: center;
-  transform: translateY(-250px);
-  transition: transform .5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  background-color: #292929;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -998;
 }
 
 .login__form input[type="text"] {
   color: #dedede;
   text-align: center;
   height: 30px;
-  background-color: #171717;
+  background-color: #dedede;
   border: 0;
-  border-radius: 50px;
 }
 
 .login__form input[type="password"] {
   color: #dedede;
   text-align: center;
   height: 30px;
-  background-color: #171717;
+  background-color: #dedede;
   border: 0;
-  border-radius: 50px;
 }
 
 .login__form input[type="button"] {
   border: 0;
-  border-radius: 50px;
   background-color: #ab001c;
   color: #dedede;
 }
 
 .login__form input[type="submit"] {
   border: 0;
-  border-radius: 50px;
   background-color: #fc23a2;
   color: #dedede;
 }
 
 .login__form--active {
-  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
 }
 
 .register__form {
   text-align: center;
-  transform: translateY(-390px);
-  transition: transform .5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  background-color: #292929;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -998;
+}
+
+form {
+  margin-top: 45vh;
 }
 
 .register__form input[type="text"] {
   color: #dedede;
   text-align: center;
   height: 30px;
-  background-color: #171717;
+  background-color: #dedede;
   border: 0;
-  border-radius: 50px;
 }
 
 .register__form input[type="password"] {
   color: #dedede;
   text-align: center;
   height: 30px;
-  background-color: #171717;
+  background-color: #dedede;
   border: 0;
-  border-radius: 50px;
 }
 
 .register__form input[type="button"] {
   border: 0;
-  border-radius: 50px;
   background-color: #ab001c;
   color: #dedede;
 }
 
 .register__form input[type="submit"] {
   border: 0;
-  border-radius: 50px;
   background-color: #fc23a2;
   color: #dedede;
 }
 
 .register__form--active {
-  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
 }
 
 /* unvisited link */
