@@ -1,0 +1,119 @@
+body {
+    /* background-image: url("../pictures/background3.png"); */
+    background-color: #262626;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hamburger {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.hamburger:focus>.hamburger__container {
+    box-shadow: 0 0 2px 2px #51a7e8;
+}
+
+.hamburger__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 35px;
+    height: 30px;
+}
+
+.hamburger__bars {
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #dedede;
+    border: 0px solid #dedede;
+    border-radius: 50px;
+    transition: transform 220ms ease-in-out;
+}
+
+.hamburger__bars:before,
+.hamburger__bars:after {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #dedede;
+    border: 0px solid #dedede;
+    border-radius: 50px;
+    content: '';
+}
+
+.hamburger__bars:before {
+    top: -12px;
+    transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
+}
+
+.hamburger__bars:after {
+    bottom: -12px;
+    transition: bottom 100ms 250ms ease-in, transform 220ms ease-in-out;
+}
+
+.hamburger--active .hamburger__bars {
+    transform: rotate(225deg);
+    transition: transform 220ms 120ms ease-in-out;
+}
+
+.hamburger--active .hamburger__bars:before {
+    top: 0;
+    transition: top 100ms ease-out;
+}
+
+.hamburger--active .hamburger__bars:after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
+}
+
+.hamburger--active {
+    transform: translateX(250px);
+}
+
+.hamburger:focus,
+.hamburger__container:focus {
+    outline: none;
+}
+
+.hamburger,
+.navigation {
+    transition: transform .3s ease-in-out;
+}
+
+.navigation {
+    height: 100vh;
+    width: 250px;
+    background-color: #171717;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+    color: #dedede;
+    margin: 0;
+}
+
+.navigation--active {
+    transform: translateX(0px);
+}
+
+.navigation__list {
+    text-align: center;
+    display: inline;
+    list-style: 0;
+}
+
+.navigation__item {
+    margin-bottom: 20px;
+    cursor: pointer;
+}

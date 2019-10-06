@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 #c {
@@ -29,7 +30,7 @@ body {
   margin-top: 15px;
 }
 
-.hamburger:focus > .hamburger__container {
+.hamburger:focus>.hamburger__container {
   box-shadow: 0 0 2px 2px #51a7e8;
 }
 
@@ -51,7 +52,8 @@ body {
   transition: transform 220ms ease-in-out;
 }
 
-.hamburger__bars:before, .hamburger__bars:after {
+.hamburger__bars:before,
+.hamburger__bars:after {
   display: block;
   position: absolute;
   width: 35px;
@@ -81,6 +83,7 @@ body {
   top: 0;
   transition: top 100ms ease-out;
 }
+
 .hamburger--active .hamburger__bars:after {
   bottom: 0;
   transform: rotate(-90deg);
@@ -91,11 +94,13 @@ body {
   transform: translateX(250px);
 }
 
-.hamburger:focus, .hamburger__container:focus {
+.hamburger:focus,
+.hamburger__container:focus {
   outline: none;
 }
 
-.hamburger, .navigation {
+.hamburger,
+.navigation {
   transition: transform .3s ease-in-out;
 }
 
@@ -141,7 +146,7 @@ body {
 }
 
 .login__form input[type="text"] {
-  color: #dedede;
+  color: #000;
   text-align: center;
   height: 30px;
   background-color: #dedede;
@@ -149,7 +154,7 @@ body {
 }
 
 .login__form input[type="password"] {
-  color: #dedede;
+  color: #000;
   text-align: center;
   height: 30px;
   background-color: #dedede;
@@ -192,7 +197,7 @@ form {
 }
 
 .register__form input[type="text"] {
-  color: #dedede;
+  color: #000;
   text-align: center;
   height: 30px;
   background-color: #dedede;
@@ -200,7 +205,7 @@ form {
 }
 
 .register__form input[type="password"] {
-  color: #dedede;
+  color: #000;
   text-align: center;
   height: 30px;
   background-color: #dedede;
@@ -224,6 +229,41 @@ form {
   opacity: 1;
 }
 
+.credits {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  background-color: #292929;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -998;
+}
+
+.credits__container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.credits__text {
+  font-family: 'Lora', serif;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin-left: 60%;
+  position: absolute;
+}
+
+.credits--active {
+  visibility: visible;
+  opacity: 0.5;
+}
+
 /* unvisited link */
 a:link {
   text-decoration: none;
@@ -233,19 +273,17 @@ a:link {
 /* visited link */
 a:visited {
   text-decoration: none;
-  color: #dedede;  
+  color: #dedede;
 }
 
 /* mouse over link */
-a:hover {  
-  text-decoration: none; 
-  color: #dedede;  
+a:hover {
+  text-decoration: none;
+  color: #dedede;
 }
 
 /* selected link */
 a:active {
-  text-decoration: none;  
+  text-decoration: none;
   color: #dedede;
 }
-
-

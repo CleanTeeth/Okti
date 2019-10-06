@@ -6,10 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/assets/style/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/style/index.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel='icon' href='/assets/pictures/favicon.ico' type='image/x-icon'/ >    
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='icon' href='/assets/pictures/favicon.ico' type='image/x-icon' />
     <title>Okti</title>
 </head>
 
@@ -22,16 +24,29 @@
 
     <div class="navigation">
         <ul class="navigation__list">
-            <!-- <span style="display: inline-block"> -->
-                    <li class="navigation__item">Log in</li>
-            <!-- </span> -->
+            <li class="navigation__item">Log in</li>
 
             <li class="navigation__item">Register</li>
+
+            <li class="navigation__item">Credits</li>
         </ul>
     </div>
 
+    <div class="credits">
+        <span class="credits__container">
+            <span class="credits__text">
+                &copy <script> document.write(new Date().getFullYear()); </script> Dawid Foltyński
+            </span>
+        </span>
+    </div>
+
     <div class="login__form">
-        <form action="#" method="GET">
+        <form action="/dashboard" method="POST">
+            <% if (error) { %>
+                <%= error%>
+            <% } %>
+            <br>
+            <br>
             <input type="text" name="username" id="username" placeholder="username">
             <br>
             <br>
